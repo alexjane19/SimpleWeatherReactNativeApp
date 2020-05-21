@@ -101,8 +101,6 @@ export default class App extends React.Component{
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"/>
                 <Text style={styles.title}>☀️ CityWeather</Text>
-                { this.state.fontLoaded === true ? (
-                    <View>
                 <View style={styles.searchContainer}>
                     <Text style={styles.searchText}>جستجوی شهر</Text>
                     <TextInput
@@ -140,7 +138,7 @@ export default class App extends React.Component{
                         <Text>{this.state.error}</Text>
                     </View>
                 )}
-                    </View>) : (<Text>Loading...</Text>)}
+                { this.state.fontLoaded === true ? (<Text style={styles.textCustomFont}>آب و هوای ایران</Text>) : (<Text>Loading...</Text>)}
             </View>
         );
     }
@@ -219,5 +217,12 @@ const styles = StyleSheet.create({
     searchButtonText: {
         fontSize: 14,
         color: 'black'
+    },
+    textCustomFont: {
+        textAlign: 'center',
+        lineHeight: 20,
+        padding: 5,
+        fontSize: 16,
+        fontFamily: 'Iran-Sans'
     }
 });
