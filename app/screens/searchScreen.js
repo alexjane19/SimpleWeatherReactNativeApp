@@ -206,7 +206,6 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         padding: 5,
         fontSize: 16,
-        fontFamily: 'Iran-Sans'
     },
     searchButton: {
         backgroundColor: 'lightgrey',
